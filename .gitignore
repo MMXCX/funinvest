@@ -1,0 +1,3 @@
+/vendor
+/app/config/mail.php
+/app/config/db.php

@@ -1,0 +1,39 @@
+php_value session.gc_maxlifetime 2000000000
+php_value display_errors 1
+php_value error_reporting 32767
+
+RewriteEngine On
+RewriteBase /
+Options All -Indexes
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^fake/(.*)$ public/fake/$1 [L]
+
+RewriteRule ^favicon\.ico$ public/favicon.ico [L]
+RewriteRule ^css/(.*)$ public/css/$1 [L]
+RewriteRule ^font/(.*)$ public/font/$1 [L]
+RewriteRule ^img/(.*)$ public/img/$1 [L]
+RewriteRule ^js/(.*)$ public/js/$1 [L]
+RewriteRule ^public/(.*)$ public/$1 [L]
+
+RewriteRule ^test.php$ test.php [L]
+RewriteRule ^(.*)$ [NC,L]
+RewriteRule ^(.*)$ index.php [NC,L]
+
+
+#   # Устанавливаем корневой директорией "basic/web"
+#   DocumentRoot "path/to/basic/web"
+#
+#   <Directory "path/to/basic/web">
+#       RewriteEngine on
+#
+#       # Если запрашиваемая в URL директория или файл существуют обращаемся к ним напрямую
+#       RewriteCond %{REQUEST_FILENAME} !-f
+#       RewriteCond %{REQUEST_FILENAME} !-d
+#       # Если нет - перенаправляем запрос на index.php
+#       RewriteRule . index.php
+#
+#       # ...прочие настройки...
+#   </Directory>

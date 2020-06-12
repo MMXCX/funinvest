@@ -1,0 +1,25 @@
+{
+  "name": "mmxcx/htdocs",
+  "authors": [
+    {
+      "name": "MMXCX",
+      "email": "g5056866@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "intervention/image": "2.5.1",
+    "illuminate/database": "^7.14",
+    "ext-iconv": "*",
+    "phpmailer/phpmailer": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Core\\": "app/core",
+      "Controllers\\": "app/controllers",
+      "Lib\\": "app/lib",
+      "Models\\": "app/models"
+    }
+  }
+}

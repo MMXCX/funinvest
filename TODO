@@ -1,0 +1,44 @@
+$_SESSION
+
+[account][user]     (id)
+[inviter_id]           (id)
+
+
+controllers
+
+
+
+--Main
+  \__index     (/)                   +
+
+
+--Page
+  \__about     (/about)              +
+  \__contact   (/contact)            +
+  \__terms     (/terms)              +
+  ....
+
+
+--Auth
+  \__login     (/login)              ++
+  \__register  (/register)           ++
+  \__ref       (/ref/{id})           ++
+  \__confirm   (/confirm/{key})      ++
+  \__recovery  (/recovery)           ++
+  \__set_pass  (/set-password/{key}) +
+  \__logout    (/logout)             ++
+
+
+--Cabinet
+  \__panel     (/panel)              +
+  \__exchange  (/exchange)
+  ....
+
+
+--Admin
+  \__login     (/admin/login+secure)
+  ....
+
+
+--Api
+  \__index (/api)                    +

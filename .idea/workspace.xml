@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90d2cef4-0b1b-4272-bef4-598b468bab76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/global.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/AuthModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/AuthModel.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" notify_if_session_was_finished_without_being_paused="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="host1.loc" id="ec547562-6689-4d69-a963-4b80cd97a303" name="host1.loc" />
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://host1.loc/" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1cpHy0PLkQKnC0u9nvpGwNPSzr6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Constants" value="false" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/auth" />
+      <recent name="$PROJECT_DIR$/app/views/page" />
+      <recent name="$PROJECT_DIR$/public/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="host1.loc" />
+                <option name="name" value="PHPSESSID" />
+                <option name="path" value="/" />
+                <option name="value" value="6l2mmtpq9ji9cfn8eindapdhqc" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://host1.loc/test.php" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://host1.loc/test.php" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.test#1">
+    <configuration name="test#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="JavascriptDebugType" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/host1.loc/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/test.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.test#1" />
+        <item itemvalue="PHP Script.test.php" />
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90d2cef4-0b1b-4272-bef4-598b468bab76" name="Default Changelist" comment="" />
+      <created>1591218864193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591218864193</updated>
+      <workItem from="1591218865354" duration="104000" />
+      <workItem from="1591219457342" duration="9000" />
+      <workItem from="1591219813746" duration="15000" />
+      <workItem from="1591277478839" duration="1995000" />
+      <workItem from="1591279636250" duration="215000" />
+      <workItem from="1591279925806" duration="148000" />
+      <workItem from="1591280104618" duration="227000" />
+      <workItem from="1591281237162" duration="98000" />
+      <workItem from="1591282254492" duration="24000" />
+      <workItem from="1591282290801" duration="194000" />
+      <workItem from="1591282534050" duration="501000" />
+      <workItem from="1591285384433" duration="89000" />
+      <workItem from="1591285503763" duration="430000" />
+      <workItem from="1591285954188" duration="66000" />
+      <workItem from="1591286095595" duration="1190000" />
+      <workItem from="1591287591793" duration="30106000" />
+      <workItem from="1591342607128" duration="72703000" />
+      <workItem from="1591474821305" duration="6251000" />
+      <workItem from="1591497346996" duration="797000" />
+      <workItem from="1591544207245" duration="912000" />
+      <workItem from="1591566801568" duration="303000" />
+      <workItem from="1591568185424" duration="8433000" />
+      <workItem from="1591660305806" duration="617000" />
+      <workItem from="1591974196314" duration="4792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="545" y="138" width="1030" height="855" key="#CLI_Interpreters" timestamp="1591476117404">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="545" y="138" width="1030" height="855" key="#CLI_Interpreters/72.27.1848.1053@72.27.1848.1053" timestamp="1591476117404" />
+    <state x="781" y="426" width="410" height="268" key="#Chrome_Settings" timestamp="1591478899487">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="781" y="426" width="410" height="268" key="#Chrome_Settings/72.27.1848.1053@72.27.1848.1053" timestamp="1591478899487" />
+    <state x="725" y="429" width="532" height="256" key="#Composer" timestamp="1591279724760">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="725" y="429" width="532" height="256" key="#Composer/72.27.1848.1053@72.27.1848.1053" timestamp="1591279724760" />
+    <state x="781" y="442" width="410" height="237" key="#Firefox_Settings" timestamp="1591477831079">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="781" y="442" width="410" height="237" key="#Firefox_Settings/72.27.1848.1053@72.27.1848.1053" timestamp="1591477831079" />
+    <state x="621" y="221" width="740" height="672" key="#Inspections" timestamp="1591290066017">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="621" y="221" width="740" height="672" key="#Inspections/72.27.1848.1053@72.27.1848.1053" timestamp="1591290066017" />
+    <state x="145" y="376" width="1691" height="362" key="#SQL_Dialects" timestamp="1591290090345">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="145" y="376" width="1691" height="362" key="#SQL_Dialects/72.27.1848.1053@72.27.1848.1053" timestamp="1591290090345" />
+    <state x="720" y="291" width="542" height="532" key="#Web_Browsers" timestamp="1591478996353">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="720" y="291" width="542" height="532" key="#Web_Browsers/72.27.1848.1053@72.27.1848.1053" timestamp="1591478996353" />
+    <state x="568" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591475495072">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="568" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591475495072" />
+    <state x="612" y="308" width="778" height="434" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591299747433">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="612" y="308" width="778" height="434" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1591299747433" />
+    <state x="627" y="222" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591979682755">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="627" y="222" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591979682755" />
+    <state x="644" y="340" width="693" height="434" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1591476435424">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="644" y="340" width="693" height="434" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/72.27.1848.1053@72.27.1848.1053" timestamp="1591476435424" />
+    <state x="683" y="179" width="616" height="755" key="#index.php" timestamp="1591476628295">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="683" y="179" width="616" height="755" key="#index.php/72.27.1848.1053@72.27.1848.1053" timestamp="1591476628295" />
+    <state x="679" y="455" width="623" height="203" key="ComposerInitDialogKey" timestamp="1591279101136">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="679" y="455" width="623" height="203" key="ComposerInitDialogKey/72.27.1848.1053@72.27.1848.1053" timestamp="1591279101136" />
+    <state x="172" y="127" width="1648" height="853" key="DiffContextDialog" timestamp="1591475242838">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="172" y="127" width="1648" height="853" key="DiffContextDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591475242838" />
+    <state x="779" y="311" width="446" height="505" key="FileChooserDialogImpl" timestamp="1591546461159">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="779" y="311" width="446" height="505" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1591546461159" />
+    <state width="1920" height="776" key="GridCell.Tab.0.bottom" timestamp="1591581021361">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021361" />
+    <state width="1920" height="776" key="GridCell.Tab.0.center" timestamp="1591581021361">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021361" />
+    <state width="1920" height="776" key="GridCell.Tab.0.left" timestamp="1591581021360">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021360" />
+    <state width="1920" height="776" key="GridCell.Tab.0.right" timestamp="1591581021361">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021361" />
+    <state width="1920" height="776" key="GridCell.Tab.1.bottom" timestamp="1591581021363">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021363" />
+    <state width="1920" height="776" key="GridCell.Tab.1.center" timestamp="1591581021362">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021362" />
+    <state width="1920" height="776" key="GridCell.Tab.1.left" timestamp="1591581021362">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021362" />
+    <state width="1920" height="776" key="GridCell.Tab.1.right" timestamp="1591581021362">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021362" />
+    <state width="1920" height="776" key="GridCell.Tab.2.bottom" timestamp="1591581021364">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.2.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021364" />
+    <state width="1920" height="776" key="GridCell.Tab.2.center" timestamp="1591581021363">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.2.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021363" />
+    <state width="1920" height="776" key="GridCell.Tab.2.left" timestamp="1591581021363">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.2.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021363" />
+    <state width="1920" height="776" key="GridCell.Tab.2.right" timestamp="1591581021363">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1920" height="776" key="GridCell.Tab.2.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591581021363" />
+    <state width="318" height="572" key="HiddenNamespacesPopup" timestamp="1591278017041">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="318" height="572" key="HiddenNamespacesPopup/72.27.1848.1053@72.27.1848.1053" timestamp="1591278017041" />
+    <state x="724" y="192" width="462" height="665" key="NewPhpClassDialog" timestamp="1591365124012">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="724" y="192" width="462" height="665" key="NewPhpClassDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591365124012" />
+    <state x="791" y="478" width="399" height="185" key="NewPhpFileDialog" timestamp="1591980598872">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="791" y="478" width="399" height="185" key="NewPhpFileDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591980598872" />
+    <state x="72" y="27" width="1848" height="1053" key="SettingsEditor" timestamp="1591980794323">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="72" y="27" width="1848" height="1053" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1591980794323" />
+    <state x="576" y="248" key="run.anything.popup" timestamp="1591476352776">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="576" y="248" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1591476352776" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1591977868290">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1591977868290" />
+  </component>
+</project>
