@@ -56,6 +56,10 @@ return [
         'controller' => 'cabinet',
         'action' => 'panel'
     ],
+    'settings' => [
+        'controller' => 'cabinet',
+        'action' => 'settings'
+    ],
 
 
 

@@ -30,7 +30,7 @@
                                required autofocus value="<?= $post['nickname'] ?? '' ?>">
                         <label for="nickname_id">Имя в системе</label>
                         <small id="nickname_help_block_id" class="form-text text-muted mb-4">
-                            Должно быть уникальным. Например "Сергей Петрович"
+                            Должно быть уникальным. Например "Сергей Петрович" или "Vitaly88"
                         </small>
                     </div>
 

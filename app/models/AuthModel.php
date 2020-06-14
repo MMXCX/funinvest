@@ -23,7 +23,7 @@ class AuthModel extends Model
             if (!$this->_validateNickname($post['nickname'])) {
                 $this->message = 'Не правильный формат Имени в системе. Можно использовать кириллицу, латинские буквы,
                 цифры, пробелы и символы нижнего и среднего подчеркивания. А также длина должна быть от 3 до 32 символов.
-                Например: Сергей Улетный, -Ольга Петровна-, -DAN_SPIDERMAN- и тд.';
+                Например "Сергей Петрович" или "Vitaly88"';
             } elseif ($this->_isNicknameInUse($post['nickname'])) {
                 $this->message = 'Данное имя уже используется в системе. Придумайте другое.';
             } elseif (!$this->_validateEmail($post['email'])) {
@@ -40,7 +40,7 @@ class AuthModel extends Model
                 $this->success = true;
                 $this->message = 'Поздравляем с успешной регистрацией. Теперь проверьте вашу почту.';
 
-                $confirmKey = md5(serialize($post));
+                $confirmKey = md5(serialize($post) . time() . microtime());
 
                 $this->_sendConfirmedEmail($this->_trimmer($post['nickname']), $post['email'], $confirmKey);
                 //replace
@@ -57,8 +57,8 @@ class AuthModel extends Model
             } elseif ($this->getPasswordByEmail($post['email']) != Hasher::hashe($post['password'])) {
                 $this->message = 'Не правильный пароль';
             } elseif ($this->getConfirmedByEmail($post['email']) != 1) {
-                $this->message = 'Ваш аккаунт одидает подтверждения. Мы отправили вам письмо на указанный Вами почтовый
-                ящик. Для завершения регистрации перейдите по ссылке.';
+                $this->message = 'Ваш аккаунт одидает подтверждения.
+                Для завершения регистрации перейдите по ссылке, которую мы отправили вам на указанный почтовый ящик.';
             } else {
                 $this->_autorizeUser($post['email']);
 
@@ -73,16 +73,39 @@ class AuthModel extends Model
         if ($result) {
             $this->success = true;
 
-            $this->message = 'По указанному E-mail отправлено письмо с инструкцией по востановлению
-                    пароля. Проверьте почту.';
+            $this->message = 'По указанному E-mail отправлено письмо с инструкцией по востановлению пароля.
+            Проверьте почту.';
+            $nickname = $this->getNickNameByEmail($email);
+            $recoveryKey = Hasher::hashe(time() . 'asd' . microtime(), 32);
+            $this->_sendRecoveryEmail($nickname, $email, $recoveryKey);
+
+            $this->updateRecoveryKeyByEmail($email, $recoveryKey);
+
             return true;
         } else {
             if ($result === null) {
                 $this->message = 'Пользователь с данным E-mail не найден в системе';
             } else {
-                $this->message = 'E-mail пользователя еще не подтвержден. Проверьте почту.';
+                $this->message = 'E-mail пользователя еще не подтвержден. Проверьте почту или зарегистрируйтесь заново.';
             }
             return false;
+        }
+    }
+
+    public function setPassword($nickname, $post)
+    {
+        if (!$this->_validatePassword($post['password'])) {
+            $this->message = 'Пароль должен быть от 8 до 32 символов';
+            return false;
+        } elseif ($post['password'] != $post['password2']) {
+            $this->message = 'Пароли не совпадают';
+            return false;
+        } else {
+            $password = Hasher::hashe($post['password']);
+            $this->updatePasswordByNickname($nickname, $password);
+            $this->message = 'Пароль успешно изменен';
+            $this->success = true;
+            return true;
         }
     }
 
@@ -98,21 +121,6 @@ class AuthModel extends Model
         $len = iconv_strlen($_nick);
 
         return $len >= 4 && $len <= 32 && preg_match("/^[-_a-zA-Zа-яА-Я0-9\s]+$/ui", $_nick) ?: false;
-    }
-
-    private function _validateEmail($email): bool
-    {
-        $len = iconv_strlen($email);
-
-        $preg = preg_match('#^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,10})$#', $email);
-
-        return $len >= 5 && $len <= 50 && $preg ?: false;
-    }
-
-    private function _validatePassword($password): bool
-    {
-        $len = strlen($password);
-        return $len >= 8 && $len <= 32;
     }
 
     private function _isNicknameInUse($nickname): bool
@@ -157,14 +165,36 @@ class AuthModel extends Model
         try {
             $this->mailer->addAddress($email, $nickname);     // Add a recipient
             $this->mailer->isHTML(true);                                  // Set email format to HTML
-            $this->mailer->Subject = 'Here is the subject';
-            $this->mailer->Body    = 'Hi '.$nickname.' to confirm <a href="http://host1.loc/confirm/'.$confirmKey.'">http://host1.loc/confirm/'.$confirmKey.'</a>';
-            $this->mailer->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $this->mailer->Subject = 'Не стоит отвечать на это письмо. Это робот.';
+            $this->mailer->Body    = 'Здравствуйти <b>' . $nickname
+                . '</b>! Для завершения регистрации перейдите по ссылке: <a href="' . HOST . '/confirm/' . $confirmKey
+                . '">' . HOST . '/confirm/' . $confirmKey . '</a>';
+            $this->mailer->AltBody = 'Здравствуйти ' . $nickname . '! Для завершения регистрации перейдите по ссылке: '
+                . HOST . '/confirm/' . $confirmKey;
 
             $this->mailer->send();
-            echo 'Message has been sent';
+            //echo 'Message has been sent';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
+            //echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
+        }
+    }
+
+    private function _sendRecoveryEmail($nickname, $email, $recoveryKey)
+    {
+        try {
+            $this->mailer->addAddress($email, $nickname);     // Add a recipient
+            $this->mailer->isHTML(true);                                  // Set email format to HTML
+            $this->mailer->Subject = 'Не стоит отвечать на это письмо. Это робот.';
+            $this->mailer->Body    = 'Здравствуйте <b>' . $nickname
+                . '</b>! Для смены пароля перейдите по ссылке: <a href="' . HOST . '/set-password/' . $recoveryKey
+                . '">' . HOST . '/set-password/' . $recoveryKey . '</a>';
+            $this->mailer->AltBody = 'Здравствуйти ' . $nickname
+                . '! Для завершения регистрации перейдите по ссылке: ' . HOST . '/confirm/' . $recoveryKey;
+
+            $this->mailer->send();
+//            echo 'Message has been sent';
+        } catch (Exception $e) {
+//            echo "Message could not be sent. Mailer Error: {$this->mailer->ErrorInfo}";
         }
     }
 
@@ -203,6 +233,20 @@ class AuthModel extends Model
                 ->first('id')->id ?? null;
     }
 
+    public function getNickNameByEmail($email)
+    {
+        return Capsule::table('users')
+                ->where('email', '=', $email)
+                ->first('nickname')->nickname ?? null;
+    }
+
+    public function getNickNameByRecoveryKey($recoveryKey)
+    {
+        return Capsule::table('users')
+                ->where('recovery_key', '=', $recoveryKey)
+                ->first('nickname')->nickname ?? null;
+    }
+
     public function confirmUserById($id)
     {
         Capsule::table('users')
@@ -210,6 +254,25 @@ class AuthModel extends Model
             ->update([
                 'confirm_key' => '',
                 'confirmed' => 1
+            ]);
+    }
+
+    public function updatePasswordByNickname($nickname, $password)
+    {
+        Capsule::table('users')
+            ->where('nickname', '=', $nickname)
+            ->update([
+                'recovery_key' => '',
+                'password' => $password
+            ]);
+    }
+
+    public function updateRecoveryKeyByEmail($email, $recoveryKey)
+    {
+        Capsule::table('users')
+            ->where('email', '=', $email)
+            ->update([
+                'recovery_key' => $recoveryKey
             ]);
     }
 }

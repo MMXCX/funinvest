@@ -14,16 +14,26 @@ class ApiController extends Controller
 
     public function indexAction()
     {
-        $test = [
-            'name' => 'Mark',
-            'surname' => 'Semenow',
-            'age' => '23',
-            'passport' => [
-                'seria' => 'KH',
-                'number' => '555123'
-            ]
-        ];
-        echo json_encode($test);
-        die;
+        if ($this->post['action'] = 'save_settings') {
+            echo $this->model->saveSettings($this->post);
+            exit;
+        }
+
+
+
+
+
+
+
+
+
+
+//        $test = [
+//            'type' => 'alert-warning',
+//            'message' => 'Sonthing is whong',
+//            'title' => 'Error'
+//        ];
+//        echo json_encode($test);
+//        die;
     }
 }

@@ -2,7 +2,8 @@
 
 return [
     'all' => [
-        'panel'
+        'panel',
+        'settings'
     ],
     'authorize' => [
         //

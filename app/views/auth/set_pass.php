@@ -13,34 +13,39 @@
             <div class="col-md-6">
 
                 <!-- Default form login -->
-                <form class="text-center" action="#!">
+                <form class="text-center" action="" method="post">
 
                     <p class="h4 mb-4">Введите новый пароль:</p>
 
+                    <?= $flash ?>
+<?php if (!$success) : ?>
                     <!-- Password -->
-                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
-                           placeholder="Пароль">
+                    <div class="md-form md-outline">
+                        <input type="password" id="password_id" name="password" class="form-control"
+                               maxlength="32" required autofocus value="<?= $post['password'] ?? '' ?>">
+                        <label for="password_id">Пароль</label>
+                    </div>
 
-                    <!-- Repeat Password -->
-                    <input type="password" id="defaultLoginFormPassword2" class="form-control mb-4"
-                           placeholder="Повторно">
+                    <!-- Password2 -->
+                    <div class="md-form md-outline">
+                        <input type="password" id="password2_id" name="password2" class="form-control"
+                               maxlength="32" required autofocus value="<?= $post['password2'] ?? '' ?>">
+                        <label for="password2_id">Пароль еще раз</label>
+                    </div>
 
                     <!-- Sign in button -->
                     <button class="btn btn-info btn-block my-4" type="submit">Сохранить</button>
 
-                    <!-- Register -->
-                    <p>Not a member?
-                        <a href="/register">Register</a>
+                    <!-- Login -->
+                    <p>Вспомнили пароль?
+                        <a href="/login">Вход</a>
                     </p>
-
-                    <!-- Social login -->
-                    <p>or sign in with:</p>
-
-                    <a href="#" class="mx-1" role="button"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="mx-1" role="button"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="mx-1" role="button"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="mx-1" role="button"><i class="fab fa-github"></i></a>
-
+<?php else : ?>
+                    <!-- Login -->
+                    <p>Войти в систему
+                        <a href="/login">Вход</a>
+                    </p>
+<?php endif; ?>
                 </form>
                 <!-- Default form login -->
 

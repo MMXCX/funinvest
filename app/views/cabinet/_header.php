@@ -1,12 +1,12 @@
 <!--Double navigation-->
 <header>
     <!-- Sidebar navigation -->
-    <div id="slide-out" class="side-nav sn-bg-4 fixed">
+    <div id="slide-out" class="side-nav sn-bg-1 fixed">
         <ul class="custom-scrollbar">
             <!-- Logo -->
             <li>
                 <div class="logo-wrapper waves-light">
-                    <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png"
+                    <a href="#"><img src="/img/mdb/mdb-transparent.png"
                                      class="img-fluid flex-center"></a>
                 </div>
             </li>
@@ -114,9 +114,14 @@
             <li class="nav-item">
                 <a class="nav-link"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link"><i class="fas fa-user"></i> <span
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> <span
                             class="clearfix d-none d-sm-inline-block">Account</span></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/settings">Настройки</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a id="navbar-static-login" alt="Sign Up"

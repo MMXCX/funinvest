@@ -25,13 +25,14 @@ controllers
   \__ref       (/ref/{id})           ++
   \__confirm   (/confirm/{key})      ++
   \__recovery  (/recovery)           ++
-  \__set_pass  (/set-password/{key}) +
+  \__set_pass  (/set-password/{key}) ++
   \__logout    (/logout)             ++
 
 
 --Cabinet
   \__panel     (/panel)              +
   \__exchange  (/exchange)
+  \__settings  (/settings)
   ....
 
 

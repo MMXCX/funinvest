@@ -22,16 +22,20 @@
             <ul class="nav navbar-nav nav-flex ml-auto">
 <?php if (isset($_SESSION['account']['user'])) : ?>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="/logout"><i class="fal fa-sign-out-alt"></i> <span
+                    <a class="nav-link waves-effect waves-light" href="/panel"><i class="fal fa-keynote"></i><span
+                                class="clearfix d-sm-inline-block">Панель управления</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="/logout"><i class="fal fa-sign-out-alt"></i><span
                                 class="clearfix d-sm-inline-block">Выход</span></a>
                 </li>
 <?php else : ?>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="/login"><i class="fal fa-sign-in-alt"></i> <span
+                    <a class="nav-link waves-effect waves-light" href="/login"><i class="fal fa-sign-in-alt"></i><span
                                 class="clearfix d-sm-inline-block">Вход</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="/register"><i class="fal fa-user-plus"></i> <span
+                    <a class="nav-link waves-effect waves-light" href="/register"><i class="fal fa-user-plus"></i><span
                                 class="clearfix d-sm-inline-block">Регистрация</span></a>
                 </li>
 <?php endif ?>
