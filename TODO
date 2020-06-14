@@ -32,7 +32,9 @@ controllers
 --Cabinet
   \__panel     (/panel)              +
   \__exchange  (/exchange)
-  \__settings  (/settings)
+  \__settings  (/settings)           ++
+  \__deposit   (/deposit)
+  \__payout    (/payout)
   ....
 
 

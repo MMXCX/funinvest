@@ -60,6 +60,14 @@ return [
         'controller' => 'cabinet',
         'action' => 'settings'
     ],
+    'deposit' => [
+        'controller' => 'cabinet',
+        'action' => 'deposit'
+    ],
+    'payout' => [
+        'controller' => 'cabinet',
+        'action' => 'payout'
+    ],
 
 
 

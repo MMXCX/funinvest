@@ -66,6 +66,27 @@
                                    value="<?= $webmoney ?? '' ?>">
                             <label for="webmoney_id">WebMoney</label>
                         </div>
+
+                        <!--Qiwi-->
+                        <div class="md-form md-outline">
+                            <input type="text" id="qiwi_id" name="qiwi" class="form-control mb-4" maxlength="16"
+                                   value="<?= $qiwi ?? '' ?>">
+                            <label for="qiwi_id">Qiwi</label>
+                        </div>
+
+                        <!--Yandex-->
+                        <div class="md-form md-outline">
+                            <input type="text" id="yandex_id" name="yandex" class="form-control mb-4" maxlength="20"
+                                   value="<?= $yandex ?? '' ?>">
+                            <label for="yandex_id">Yandex</label>
+                        </div>
+
+                        <!--Card-->
+                        <div class="md-form md-outline">
+                            <input type="text" id="card_id" name="card" class="form-control mb-4" maxlength="19"
+                                   value="<?= $card ?? '' ?>">
+                            <label for="card_id">Банковская карта</label>
+                        </div>
                     </div>
                 </div>
             </div>

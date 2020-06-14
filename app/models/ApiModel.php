@@ -47,6 +47,35 @@ class ApiModel extends Model
                         'message' => 'Новые пароли не совпадают'
                     ];
                 }
+            } elseif (!empty($post['webmoney']) && !$this->_validateWebmoney($post['webmoney'])) {
+                $alert = [
+                    'type' => 'alert-danger',
+                    'title' => 'Ошибка!',
+                    'message' => 'Не верный формат WebMoney кошелька. Используйте первую заглавную латинскую букву и
+                    12 цифр после. Например "R123456789012" или "Z987654321098"'
+                ];
+            } elseif (!empty($post['qiwi']) && !$this->_validatePhone($post['qiwi'])) {
+                $alert = [
+                    'type' => 'alert-danger',
+                    'title' => 'Ошибка!',
+                    'message' => 'Не верный формат Qiwi кошелька. Используйте номер телефона в международном
+                    формате. Первый символ "+" и далее цифры без скобок и тире. Например "+79991234567" или "+375291234567"'
+                ];
+            } elseif (!empty($post['yandex']) && !$this->_validateYandex($post['yandex'])) {
+                $alert = [
+                    'type' => 'alert-danger',
+                    'title' => 'Ошибка!',
+                    'message' => 'Не верный формат Yandex кошелька. Используйте номер телефона в международном
+                    формате. Первый символ "+" и далее цифры без скобок и тире. Или номер счёта из цифр.
+                    Например "+79991234567" или "123456789012345678"'
+                ];
+            } elseif (!empty($post['card']) && !$this->_validateCard($post['card'])) {
+                $alert = [
+                    'type' => 'alert-danger',
+                    'title' => 'Ошибка!',
+                    'message' => 'Не верный формат номера карты. Используйте цифры без пробелов и разделителей.                  формате. Первый символ "+" и далее цифры без скобок и тире. Или номер счёта из цифр.
+                    Например "1234567890123456"'
+                ];
             }
 
 
@@ -83,7 +112,11 @@ class ApiModel extends Model
     private function _updateUserSettings($post)
     {
         $values = [
-            'email' => $post['email']
+            'email' => $post['email'],
+            'webmoney' => $post['webmoney'],
+            'qiwi' => $post['qiwi'],
+            'yandex' => $post['yandex'],
+            'card' => $post['card']
         ];
 
         if (!empty($post['new_password'])) $values['password'] = Hasher::hashe($post['new_password']);
@@ -98,5 +131,20 @@ class ApiModel extends Model
     private function _validateWebmoney($webmoney)
     {
         return preg_match('#^[ZER][0-9]{12}$#', $webmoney);
+    }
+
+    private function _validatePhone($phone)
+    {
+        return preg_match('#^[+]{1}[0-9]{11,15}$#', $phone);
+    }
+
+    private function _validateYandex($yandex)
+    {
+        return preg_match('#^[0-9]{11,20}$#', $yandex) or $this->_validatePhone($yandex);
+    }
+
+    private function _validateCard($card)
+    {
+        return preg_match('#^[0-9]{13,19}$#', $card);
     }
 }

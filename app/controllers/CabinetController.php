@@ -40,7 +40,34 @@ class CabinetController extends Controller
         $vars = [
             'title' => 'Настройки',
             'email' => $user->email,
-            'webmoney' => $user->webmoney
+            'webmoney' => $user->webmoney,
+            'qiwi' => $user->qiwi,
+            'yandex' => $user->yandex,
+            'card' => $user->card
+        ];
+
+        $this->view->render($vars);
+    }
+
+    /**
+     * Пополнение счета
+     */
+    public function depositAction()
+    {
+        $vars = [
+            'title' => 'Пополнение счёта'
+        ];
+
+        $this->view->render($vars);
+    }
+
+    /**
+     * Выплаты
+     */
+    public function payoutAction()
+    {
+        $vars = [
+            'title' => 'Выплаты'
         ];
 
         $this->view->render($vars);

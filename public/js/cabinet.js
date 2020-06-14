@@ -19,6 +19,9 @@ function sendData() {
     var new_password = document.getElementById('new_password_id').value;
     var new_password2 = document.getElementById('new_password2_id').value;
     var webmoney = document.getElementById('webmoney_id').value;
+    var qiwi = document.getElementById('qiwi_id').value;
+    var yandex = document.getElementById('yandex_id').value;
+    var card = document.getElementById('card_id').value;
 
     $.ajax('/api', {
         type: 'post',
@@ -28,6 +31,9 @@ function sendData() {
             'new_password': new_password,
             'new_password2': new_password2,
             'webmoney': webmoney,
+            'qiwi': qiwi,
+            'yandex': yandex,
+            'card': card,
             'action': 'save_settings'
         },
         success: function (data, status, xhr) {

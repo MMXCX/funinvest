@@ -1,4 +1,4 @@
 <?php
 
-define('DEBUG', false);
+define('DEBUG', true);
 DEBUG ? define('HOST', 'http://host1.loc') : define('HOST', 'http:/host1.loc');

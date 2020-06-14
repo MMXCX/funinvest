@@ -3,7 +3,9 @@
 return [
     'all' => [
         'panel',
-        'settings'
+        'settings',
+        'deposit',
+        'payout'
     ],
     'authorize' => [
         //

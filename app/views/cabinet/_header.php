@@ -109,29 +109,37 @@
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <li class="nav-item">
-                <a class="nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+                <a class="nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Почта</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> <span
-                            class="clearfix d-none d-sm-inline-block">Account</span></a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            class="clearfix d-none d-sm-inline-block">Аккаунт</span></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/settings">Настройки</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a id="navbar-static-login" alt="Sign Up"
-                   class="btn btn-info btn-rounded btn-sm waves-effect waves-light auth-modal-toggle"
-                   data-auth-modal-tab="sign-up">SIGN UP</a>
+
+            <!--Dropdown primary-->
+            <li class="nav-item dropdown">
+
+                <!--Trigger-->
+                <button class="btn btn-warning btn-sm btn-rounded btn-outline dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><i
+                            class="fas fa-piggy-bank pr-2"
+                            aria-hidden="true"></i>Счёт</button>
+                <!--Menu-->
+                <div class="dropdown-menu dropdown-primary">
+<!--                    TODO-->
+                    <a class="dropdown-item" href="/deposit">Пополнить</a>
+                    <a class="dropdown-item" href="/payout">Выплаты</a>
+                </div>
             </li>
+            <!--/Dropdown primary-->
+
             <li class="nav-item">
                 <a href="/logout" type="button" class="btn btn-outline-info btn-rounded btn-sm waves-effect"><i
                             class="fas fa-sign-out-alt pr-2"
-                            aria-hidden="true"></i>Exit
+                            aria-hidden="true"></i>Выйти
                 </a>
             </li>
 
