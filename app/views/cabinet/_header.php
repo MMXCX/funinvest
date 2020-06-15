@@ -6,7 +6,7 @@
             <!-- Logo -->
             <li>
                 <div class="logo-wrapper waves-light">
-                    <a href="#"><img src="/img/mdb/mdb-transparent.png"
+                    <a href="/panel"><img src="/img/mdb/mdb-transparent.png"
                                      class="img-fluid flex-center"></a>
                 </div>
             </li>
@@ -21,15 +21,6 @@
                 </ul>
             </li>
             <!--/Social-->
-            <!--Search Form-->
-            <li>
-                <form class="search-form" role="search">
-                    <div class="form-group md-form mt-0 pt-1 waves-light">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                </form>
-            </li>
-            <!--/.Search Form-->
             <!-- Side navigation links -->
             <li>
                 <ul class="collapsible collapsible-accordion">
@@ -44,51 +35,28 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-hand-pointer-o"></i>
-                            Instruction<i class="fas fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#" class="waves-effect">For bloggers</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">For authors</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <hr>
+                    <li>
+                        <a class="waves-effect" href="/deposit">
+                            <i class="fas fa-piggy-bank"></i>Пополнить
+                        </a>
                     </li>
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-eye"></i> About<i
-                                    class="fas fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#" class="waves-effect">Introduction</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">Monthly meetings</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <li>
+                        <a class="waves-effect" href="/payout">
+                            <i class="fas fa-envelope-open-dollar"></i>Выплаты
+                        </a>
                     </li>
-                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-envelope-o"></i> Contact
-                            me<i
-                                    class="fas fa-angle-down rotate-icon"></i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#" class="waves-effect">FAQ</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">Write a message</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">FAQ</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">Write a message</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">FAQ</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">Write a message</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">FAQ</a>
-                                </li>
-                                <li><a href="#" class="waves-effect">Write a message</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <hr>
+                    <li>
+                        <a class="waves-effect" href="/settings">
+                            <i class="fas fa-cog"></i>Настройки
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a class="waves-effect" href="/about">
+                            <i class="fas fa-eye"></i>О нас
+                        </a>
                     </li>
                 </ul>
             </li>
@@ -108,9 +76,23 @@
             <p>Material Design for Bootstrap</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+
+
+
+
             <li class="nav-item">
-                <a class="nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Почта</span></a>
+                <a class="btn btn-sm btn-so">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <span class="counter counter-sm">12</span>
             </li>
+
+
+
+
+
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> <span
                             class="clearfix d-none d-sm-inline-block">Аккаунт</span></a>
@@ -118,24 +100,6 @@
                     <a class="dropdown-item" href="/settings">Настройки</a>
                 </div>
             </li>
-
-            <!--Dropdown primary-->
-            <li class="nav-item dropdown">
-
-                <!--Trigger-->
-                <button class="btn btn-warning btn-sm btn-rounded btn-outline dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i
-                            class="fas fa-piggy-bank pr-2"
-                            aria-hidden="true"></i>Счёт</button>
-                <!--Menu-->
-                <div class="dropdown-menu dropdown-primary">
-<!--                    TODO-->
-                    <a class="dropdown-item" href="/deposit">Пополнить</a>
-                    <a class="dropdown-item" href="/payout">Выплаты</a>
-                </div>
-            </li>
-            <!--/Dropdown primary-->
-
             <li class="nav-item">
                 <a href="/logout" type="button" class="btn btn-outline-info btn-rounded btn-sm waves-effect"><i
                             class="fas fa-sign-out-alt pr-2"

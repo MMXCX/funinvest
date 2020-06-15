@@ -22,6 +22,10 @@
             <ul class="nav navbar-nav nav-flex ml-auto">
 <?php if (isset($_SESSION['account']['user'])) : ?>
                 <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="/panel"><i class="fal fa-keynote"></i><span
+                                class="clearfix d-sm-inline-block">Панель управления</span></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link waves-effect waves-light" href="/logout"><i class="fal fa-sign-out-alt"></i> <span
                                 class="clearfix d-sm-inline-block">Выход</span></a>
                 </li>

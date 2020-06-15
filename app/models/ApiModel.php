@@ -6,6 +6,7 @@ namespace Models;
 use Core\Model;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Lib\Hasher;
+use Lib\Validator;
 
 
 class ApiModel extends Model
@@ -25,7 +26,7 @@ class ApiModel extends Model
                     'title' => 'Ошибка!',
                     'message' => 'Для сохранения любых изменения в настройках нужно указать Ваш текущий пароль.'
                 ];
-            } elseif (!$this->_validateEmail($post['email'])) {
+            } elseif (!Validator::email($post['email'])) {
                 $alert = [
                     'type' => 'alert-danger',
                     'title' => 'Ошибка!',

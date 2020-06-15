@@ -6,6 +6,7 @@ namespace Models;
 use Core\Model;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Lib\Hasher;
+use Lib\Validator;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
@@ -26,7 +27,7 @@ class AuthModel extends Model
                 Например "Сергей Петрович" или "Vitaly88"';
             } elseif ($this->_isNicknameInUse($post['nickname'])) {
                 $this->message = 'Данное имя уже используется в системе. Придумайте другое.';
-            } elseif (!$this->_validateEmail($post['email'])) {
+            } elseif (!Validator::email($post['email'])) {
                 $this->message = 'Не верно указан формат E-mail. Например: markmain@mail.ru, ValentinIzmailov@Gmail.com
                 (допускается не более 50 символов)';
             } elseif ($this->_isEmailInUse($post['email'])) {
